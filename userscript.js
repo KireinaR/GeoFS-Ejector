@@ -26,4 +26,18 @@
       geofs.aircraft.instance.change(50);
     }
   });
+
+  function sonicBoom() {
+    if (
+      geofs.animation.values.kias >= 667 &&
+      geofs.animation.values.kias <= 668
+    ) {
+      audio.impl.html5.playFile(
+        "https://github.com/KireinaR/GeoFS-Ejector/raw/refs/heads/main/sonicboom.mp3"
+      );
+    }
+  }
+  let sonicBoomInt = setInterval(function () {
+    sonicBoom();
+  }, 100);
 })();
