@@ -4,8 +4,8 @@
 // @version 1
 // @description An addon for GeoFS that ejects player and switches to paraglider
 // @author KireinaR (Wen/Syn)
-// @match http:///geofs.php
-// @match https:///geofs.php
+// @match https://geo-fs.com/geofs.php*
+// @match https://*.geo-fs.com/geofs.php*
 // @run-at document-end
 // @grant none
 // ==/UserScript==
@@ -22,7 +22,7 @@
   document.addEventListener("keydown", async (event) => {
     if (event.key === "`") {
       geofs.aircraft.instance.stopEngine();
-      await sleep(3000);
+      await sleep(6000);
       geofs.aircraft.instance.change(50);
     }
   });
