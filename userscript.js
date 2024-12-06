@@ -22,7 +22,7 @@
   document.addEventListener("keydown", async (event) => {
     if (event.key === "`") {
       geofs.aircraft.instance.stopEngine();
-      await sleep(3000);
+      await sleep(6000);
       geofs.aircraft.instance.change(50);
     }
   });
