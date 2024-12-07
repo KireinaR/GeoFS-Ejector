@@ -39,7 +39,7 @@
   }
   let sonicBoomInt = setInterval(function () {
     sonicBoom();
-  }, 100);
+  }, 40);
 
   function rwr() {
     let csMap = [];
