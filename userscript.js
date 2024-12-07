@@ -55,18 +55,18 @@
       if (!csMap.includes(cs)) {
         csMap.push(cs);
         audio.impl.html5.playFile(
-          "https://github.com/KireinaR/GeoFS-Ejector/raw/refs/heads/main/lock.mp3"
+          "https://github.com/KireinaR/GeoFS-Ejector/raw/refs/heads/main/lock.wav"
         );
       } else {
         audio.impl.html5.playFile(
-          "https://github.com/KireinaR/GeoFS-Ejector/raw/refs/heads/main/lock.mp3"
+          "https://github.com/KireinaR/GeoFS-Ejector/raw/refs/heads/main/lock.wav"
         );
       }
     } else if (!lock && msg.includes("away")) {
       if (!csMap.includes(cs)) return;
       else {
         audio.impl.html5.playFile(
-          "https://github.com/KireinaR/GeoFS-Ejector/raw/refs/heads/main/launch.mp3"
+          "https://github.com/KireinaR/GeoFS-Ejector/raw/refs/heads/main/launch.wav"
         );
         csMap.splice(csMap.indexOf(cs), 1);
       }
