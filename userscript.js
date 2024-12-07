@@ -40,38 +40,4 @@
   let sonicBoomInt = setInterval(function () {
     sonicBoom();
   }, 40);
-
-  function rwr() {
-    let csMap = [];
-    let lastMessageSent = document.querySelector(
-      "#geofs-ui-3dview > div.geofs-canvas-mouse-overlay > div.geofs-chat-messages.geofs-authenticated"
-    ).children[0].innerText;
-    let msg = lastMessageSent.split(":")[1].trim().toLowerCase();
-    cs = lastMessageSent.split(":")[0].trim().toLowerCase();
-    let regex = /^locking\s+\S+\s+on\s+\S+$/;
-    lock = regex.test(messageWords);
-    if (!lock && !msg.includes("away")) return;
-    else if (lock) {
-      if (!csMap.includes(cs)) {
-        csMap.push(cs);
-        audio.impl.html5.playFile(
-          "https://github.com/KireinaR/GeoFS-Ejector/raw/refs/heads/main/lock.wav"
-        );
-      } else {
-        audio.impl.html5.playFile(
-          "https://github.com/KireinaR/GeoFS-Ejector/raw/refs/heads/main/lock.wav"
-        );
-      }
-    } else if (!lock && msg.includes("away")) {
-      if (!csMap.includes(cs)) return;
-      else {
-        audio.impl.html5.playFile(
-          "https://github.com/KireinaR/GeoFS-Ejector/raw/refs/heads/main/launch.wav"
-        );
-        csMap.splice(csMap.indexOf(cs), 1);
-      }
-    }
-  }
-
-  setInterval(() => rwr(), 10);
 })();
